@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .api-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .api-link:hover {
+            background-color: #0056b3;
+        }
+        .endpoints {
+            margin-top: 30px;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .method {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo API Documentation</h1>
+        <p>Welcome to the Todo API! This API provides endpoints for user authentication and todo management.</p>
+        
+        <div style="text-align: center;">
+            <a href="/api-docs" class="api-link">View Swagger Documentation</a>
+        </div>
+
+        <div class="endpoints">
+            <h2>Available Endpoints</h2>
+            
+            <div class="endpoint">
+                <span class="method">POST</span> /auth/register - Register a new user
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">POST</span> /auth/login - Login user
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">GET</span> /todo - Get all todos (requires authentication)
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">POST</span> /todo - Create a new todo (requires authentication)
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 15px; background-color: #e7f3ff; border-radius: 5px;">
+            <h3>Quick Start</h3>
+            <ol>
+                <li>Register a new user using <code>/auth/register</code></li>
+                <li>Login to get a JWT token using <code>/auth/login</code></li>
+                <li>Use the token in the Authorization header: <code>Bearer YOUR_TOKEN</code></li>
+                <li>Access protected endpoints like <code>/todo</code></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
